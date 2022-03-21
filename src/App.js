@@ -2,8 +2,8 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header/Header';
-import Carousels from './components/Carousel/Carousel';
-import Footer from './components/Footer/Footer';
+// import Carousels from './components/Carousel/Carousel';
+// import Footer from './components/Footer/Footer';
 
 function App() {
 	return(
@@ -11,9 +11,9 @@ function App() {
 			{/* =========Header======= */}
 			<Header></Header>
 			{/* =========Carousel======= */}
-			<Carousels></Carousels>
+			{/* <Carousels></Carousels> */}
 			{/* =========Footer======= */}
-			<Footer></Footer>
+			{/* <Footer></Footer> */}
 		</div>
 	)
 }
