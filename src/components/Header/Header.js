@@ -9,7 +9,9 @@ const Header = () => {
 				<Navbar.Brand href="#">
 					<img src="./logo.svg" alt="" />
 				</Navbar.Brand>
-				<Navbar.Toggle aria-controls="navbarScroll" />
+				<Navbar.Toggle aria-controls="navbarScroll">
+					<i className='fas fa-bars text-white'></i>
+				</Navbar.Toggle>
 				<Navbar.Collapse>
 				<Nav className="me-auto my-2 my-lg-0">
 					<Nav.Link href="/">Home</Nav.Link>
