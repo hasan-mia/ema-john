@@ -2,12 +2,13 @@ import React from 'react';
 
 const Product = (props) => {
 	console.log(props)
+	const {addToCard, product} = props;
 	// const {name, img, category, price, ratings, ratingsCount, seller, shipping, stock } = props.product;
-	const {name, img, category, price, ratings} = props.product;
+	const {name, img, category, price, ratings} = product;
 	return (
 		<div className="col-lg-4 col-md-6 col-12">
-			<div class="card px-2 py-0 mb-3">
-				<img src={img} className="card-img-top h-50 p-3" alt=""/>
+			<div class="card py-0 mb-3">
+				<img src={img} className="card-img-top h-50 p-1" alt=""/>
 					<div class="card-body">
 						<h2 class="card-title fw-bold fs-6">{name}</h2>
 						<p class="card-text text-justify fs-6">Price: $ {price} </p>
@@ -16,7 +17,7 @@ const Product = (props) => {
 					</div>
 								<div class="card-footer d-flex justify-content-between">
 						<button class="btn btn-warning text-uppercase text-center"> View Details </button>
-						<button class="btn btn-warning text-uppercase"> <i class="fas fa-cart-arrow-down fa-x"></i> </button>
+						<button onClick={()=> addToCard(product)} class="btn btn-warning text-uppercase"> <i class="fas fa-cart-arrow-down fa-x"></i> </button>
 					</div>
 			</div>
 		</div>
