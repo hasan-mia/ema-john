@@ -1,8 +1,8 @@
 import React from 'react';
 
 const Product = (props) => {
-	console.log(props)
-	const {addToCard, product} = props;
+	// console.log(props)
+	const {addToCart, product} = props;
 	// const {name, img, category, price, ratings, ratingsCount, seller, shipping, stock } = props.product;
 	const {name, img, category, price, ratings} = product;
 	return (
@@ -17,7 +17,7 @@ const Product = (props) => {
 					</div>
 								<div class="card-footer d-flex justify-content-between">
 						<button class="btn btn-warning text-uppercase text-center"> View Details </button>
-						<button onClick={()=> addToCard(product)} class="btn btn-warning text-uppercase"> <i class="fas fa-cart-arrow-down fa-x"></i> </button>
+						<button onClick={()=> addToCart(product)} class="btn btn-warning text-uppercase"> <i class="fas fa-cart-arrow-down fa-x"></i> </button>
 					</div>
 			</div>
 		</div>

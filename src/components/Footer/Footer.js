@@ -5,7 +5,8 @@ const Footer = () => {
 	return (
 		<Container fluid className='footer pt-2'>
 			<Row className="justify-content-lg-center text-lg-center">
-				<Col lg={3} md={6} sm={12}>
+				<p> &copy; 2022 all right reserved by <a href='https://github.com/hasanrafi69' target="_blank">emaa-john.com</a></p>
+				{/* <Col lg={3} md={6} sm={12}>
 					<h3>Ours</h3>
 				</Col>
 				<Col lg={3} md={6} sm={12}>
@@ -16,7 +17,7 @@ const Footer = () => {
 				</Col>
 				<Col lg={3} md={6} sm={12}>
 					<h3>Get App</h3>
-				</Col>
+				</Col> */}
 				
 			</Row>
 		</Container>

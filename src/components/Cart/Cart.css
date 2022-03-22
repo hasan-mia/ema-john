@@ -1,0 +1,16 @@
+.summery{
+    position: fixed;
+    top: 1.7rem;
+    background: #ffa31ae3;
+    height: 75%;
+    border-radius: 3px;
+}
+
+@media (max-width: 767px){
+    .summery{
+        position: fixed;
+        top: 2rem;
+        height: 40%;
+        width: 92%;
+    }
+}
