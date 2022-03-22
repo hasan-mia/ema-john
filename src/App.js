@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header/Header';
 import Shop from './components/Shop/Shop';
 // import Carousels from './components/Carousel/Carousel';
-// import Footer from './components/Footer/Footer';
+import Footer from './components/Footer/Footer';
 
 function App() {
 	return(
@@ -15,7 +15,7 @@ function App() {
 			{/* =========Carousel======= */}
 			{/* <Carousels></Carousels> */}
 			{/* =========Footer======= */}
-			{/* <Footer></Footer> */}
+			<Footer></Footer>
 		</>
 	)
 }

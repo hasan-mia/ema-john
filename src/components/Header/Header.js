@@ -4,7 +4,7 @@ import { Container, Navbar, Nav, Form, FormControl, Button } from 'react-bootstr
 import './Header.css';
 const Header = () => {
 	return (
-		<Navbar bg="dark" expand="lg">
+		<Navbar bg="dark" fixed="top" expand="lg">
 			<Container>
 				<Navbar.Brand href="#">
 					<img src="./logo.svg" alt="" />
