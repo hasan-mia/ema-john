@@ -32,7 +32,7 @@ const Header = () => {
 
 				<Nav className="ms-auto my-2 my-lg-0">
 					<Nav.Link href="/user"> <i className='fas fa-user'></i> </Nav.Link>
-					<Nav.Link href="/cart"> <i className='fas fa-heart'></i> </Nav.Link>
+					<Nav.Link href="/wish"> <i className='fas fa-heart'></i> </Nav.Link>
 					<Nav.Link href="/cart"> <i className='fas fa-cart-arrow-down'></i> </Nav.Link>
 				</Nav>
 				</Navbar.Collapse>

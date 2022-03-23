@@ -2,7 +2,7 @@
     position: fixed;
     top: 1.7rem;
     background: #ffa31ae3;
-    height: 75%;
+    height: 45%;
     border-radius: 3px;
 }
 
@@ -10,7 +10,7 @@
     .summery{
         position: fixed;
         top: 2rem;
-        height: 40%;
+        height: 55%;
         width: 92%;
     }
 }
