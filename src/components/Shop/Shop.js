@@ -15,33 +15,46 @@ const Shop = () => {
 	}, [])
 
 	// Get Cart from Local Storage
-	useEffect(()=>{
+	useEffect( ()=>{
 		const storeLocalCart = getStoredCart();
-		const saveCart = []
-		console.log(storeLocalCart);
+		const savedCart = [];
+		// console.log(storeLocalCart);
 		for (const id in storeLocalCart) {
-			const addedProduct = products.find(product => product.id == id);
+			const addedProduct = products.find(product => product.id === id);
 			if (addedProduct) {
-				const quantity = storeLocalCart[id]
+				const quantity = storeLocalCart[id];
 				addedProduct.quantity = quantity + 1;
-				saveCart.push(addedProduct);
+				savedCart.push(addedProduct);
 				// console.log(quantity);
 			}
 		}
 		// Set/Save new cart data in ui
-		setCart(saveCart)
+		setCart(savedCart)
 
 	}, [products])
 
-	const addToCart = (product)=>{
-		// console.log(product);
-		const updateCart = [...cart, product];
-		setCart(updateCart);
+	const addToCart = (selectedProduct)=>{
+		// Get Existed Product
+		let newUpdateCart = [];
+		const existProduct = cart.find(product => product.id === selectedProduct.id);
+		if (!existProduct) {
+			selectedProduct.quantity = 1;
+			newUpdateCart = [...cart, selectedProduct];
+			
+		}
+		else{
+		const rest = cart.filter(product => product.id !== selectedProduct.id);
+		existProduct.quantity = existProduct.quantity + 1;
+			newUpdateCart = [...rest, existProduct];
+		}
+		// console.log(selectedProduct);
+		setCart(newUpdateCart);
 
 		// Add Product into localStorage DB
-		addToDb(product.id)
+		addToDb(selectedProduct.id);
 		// console.log(addToDb(product));
 	}
+	
 	return (
 		<div className="container mb-2 mt-4 pt-5">
 			<div className="row">

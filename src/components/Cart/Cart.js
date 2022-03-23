@@ -7,9 +7,10 @@ const Cart = (props) => {
 	// total Price & Shipping of Product
 	let total = 0;
 	let shipping = 0;
+	let quantity = 0;
 	cart.forEach( product => {
-		total = total + product.price
-		shipping = shipping + product.shipping
+		quantity = quantity + product.quantity;
+		total = total + product.price * product.quantity;
 		shipping = shipping + product.shipping
 		
 	});
@@ -22,7 +23,7 @@ const Cart = (props) => {
 	return (
 		<div className="summery mt-5 px-5">
 			<h4>Order Summery </h4>
-			<p>Selected Iteams: {cart.length}</p>
+			<p>Selected Iteams: {quantity}</p>
 			<p>Total Price: ${total} </p>
 			<p>Selected Shipping: ${shipping}</p>
 			<p>Tax: ${tax} </p>
