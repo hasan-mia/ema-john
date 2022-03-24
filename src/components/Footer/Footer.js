@@ -6,9 +6,7 @@ const Footer = () => {
 		<Container fluid className='footer pt-2'>
 			<Row className="justify-content-lg-center text-lg-center">
 				< p > & copy;
-				2022 all right reserved by < a href = 'https://github.com/hasanrafi69'
-				target = "_blank"
-				rel = "noopener noreferrer"> emaa - john.com </a></p >
+				2022 all right reserved by < a href = 'https://github.com/hasanrafi69'> emaa-john.com </a></p >
 				{/* <Col lg={3} md={6} sm={12}>
 					<h3>Ours</h3>
 				</Col>
