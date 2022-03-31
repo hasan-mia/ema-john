@@ -1,0 +1,6 @@
+.order{
+	min-height: 95vh;
+}
+.order .container{
+	padding-top: 5rem;
+}
