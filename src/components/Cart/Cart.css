@@ -17,6 +17,7 @@
 tr#item {
     border: 1px solid gainsboro;
     margin-top: 8px;
+    background: #ffeeb9;
 }
 .summery {
     background: #ffc3104a;
@@ -35,9 +36,7 @@ tr#item {
 }
 @media (max-width: 767px){
     .summery{
-        position: fixed;
-        top: 2rem;
-        height: 55%;
-        width: 92%;
+        padding-top: 1rem!important;
+        margin-top: 1rem!important;
     }
 }

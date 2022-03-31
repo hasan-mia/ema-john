@@ -36,11 +36,11 @@ const Header = ({cart}) => {
 					<Button variant="outline-warning bg-white"> <i className='fas fa-search'></i> </Button>
 				</Form>
 
-				<Nav className="ms-auto my-2 my-lg-0">
+				<Nav className="ms-auto my-2 my-lg-0 nav-right">
 					<Link className='nav-link' to="/user"> <i className='fas fa-user'></i> </Link>
 					<Link className='nav-link' to="/wishlist"> <i className='fas fa-heart'></i> </Link>
 					<Link className='nav-link' to = "/cart" > <i className ='fas fa-cart-arrow-down' > </i> 
-					<span className='position-absolute badge rounded top-0'>
+					<span className='position-absolute badge rounded top-0 cart-count'>
 						{quantity}
 					</span > 
 					</Link>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
 import useCart from '../../Hooks/useCart';
 import useProducts from '../../Hooks/useProducts';
 import './Cart.css'
@@ -32,6 +33,16 @@ const Cart = () => {
 						<div className="cart-item pt-5">
 							<table className='table'>
 								<thead>
+									<tr className='d-flex justify-content-between'>
+										<th className='float-start text-center'>Image</th>
+										<th className='w-100'>Name</th>
+										<th>Price</th>
+										<th>Quantity</th>
+										<th>Total</th>
+										<th className='float-end'> <i className="far fa-backspace"></i></th>
+									</tr>
+								</thead>
+								<tbody>
 									{
 										cart.map(item =>
 											<tr className='d-flex align-items-center' id='item'>
@@ -39,14 +50,14 @@ const Cart = () => {
 												<td className='w-100'>{item.name}</td>
 												<td>{item.price}</td>
 												<td>{item.quantity}</td>
+												<td>{item.price * item.quantity}</td>
 												<td className='float-end'> <button className='btn-transparent'><i className="fas fa-trash-alt"></i></button> </td>
 											</tr>
 										)
 									}
 									
-								</thead>
+								</tbody>
 							</table>
-							<h1> {quantity} </h1>
 						</div>
 					</div>
 
@@ -58,6 +69,10 @@ const Cart = () => {
 							<p>Selected Shipping: ${shipping}</p>
 							<p>Tax: ${tax} </p>
 							<p>Grand Total: ${grandTotal.toFixed(2)} </p>
+
+							<div className='row'>
+								<Button variant='dark fs-5 text-uppercase  fw-bold'>Checkout</Button>
+							</div>
 						</div>
 					</div>
 				</div>
