@@ -1,11 +1,38 @@
-.summery{
-    position: fixed;
-    top: 1.7rem;
-    background: #ffa31ae3;
-    height: 45%;
+.cart{
+	min-height: 95vh;
+}
+.cart .container{
+	padding-top: 2rem;
+}
+.cart-img {
+    width: 80px;
+    height: auto;
+    border-radius: 50%;
+}
+.table>:not(caption)>*>*{
+    border-bottom: 0;
+    font-weight: 500;
+    font-size: 20px;
+}
+tr#item {
+    border: 1px solid gainsboro;
+    margin-top: 8px;
+}
+.summery {
+    background: #ffc3104a;
     border-radius: 3px;
+    padding: 1rem 0;
+    box-shadow: 1px 2px 5px 3px #c4bc91b3;
 }
 
+.summery h4 {
+    border: 1px dashed #72726c;
+    padding: 2px 0 4px 0;
+}
+.summery p {
+    font-size: 20px;
+    font-weight: 500;
+}
 @media (max-width: 767px){
     .summery{
         position: fixed;

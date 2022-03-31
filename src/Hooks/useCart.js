@@ -12,7 +12,7 @@ const useCart = (products) => {
 			const getProduct = products.find(product => product.id === id);
 			if (getProduct) {
 				const quantity = storeLocalCart[id];
-				getProduct.quantity = quantity + 1;
+				getProduct.quantity = quantity;
 				savedCart.push(getProduct);
 			}
 		}

@@ -2,13 +2,13 @@
 import React from 'react';
 import { Container, Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import useCart from '../../Hooks/useCart';
-import useProducts from '../../Hooks/useProducts';
 import './Header.css';
-const Header = () => {
-	// Call Product and cart hook
-	const [products, setProducts] = useProducts();
-	const [cart, setCart] = useCart(products);
+const Header = ({cart}) => {
+	let quantity = 0;
+	cart.forEach(product => {
+		quantity = quantity + product.quantity;
+	});
+
 	return (
 		<Navbar bg="dark" fixed="top" expand="lg">
 			<Container>
@@ -21,7 +21,7 @@ const Header = () => {
 				<Navbar.Collapse>
 				<Nav className="me-auto my-2 my-lg-0">
 					<Link className='nav-link' to="/">Home</Link>
-					<Link className='nav-link' to="/order">Order</Link>
+					<Link className='nav-link' to="/cart">Order</Link>
 					{/* <Link className='nav-link' href="/inventory">Inventory</Link> */}
 					<Link className='nav-link' to="/about">About</Link>
 				</Nav>
@@ -39,9 +39,9 @@ const Header = () => {
 				<Nav className="ms-auto my-2 my-lg-0">
 					<Link className='nav-link' to="/user"> <i className='fas fa-user'></i> </Link>
 					<Link className='nav-link' to="/wishlist"> <i className='fas fa-heart'></i> </Link>
-					< Link className='nav-link' to = "/order" > < i className = 'fas fa-cart-arrow-down' > </i> 
-					<span className='position-absolute badge rounded'>
-						{cart.length}
+					<Link className='nav-link' to = "/cart" > <i className ='fas fa-cart-arrow-down' > </i> 
+					<span className='position-absolute badge rounded top-0'>
+						{quantity}
 					</span > 
 					</Link>
 				</Nav>
