@@ -14,7 +14,7 @@ const Product = (props) => {
 						<p className="card-text text-justify fs-6">Rating: {ratings} <i className="fas fa-star text-warning"></i> </p>
 					</div>
 						<div className="card-footer d-flex justify-content-center">
-						<button onClick={()=> addToCart(product)} className="btn btn-warning text-uppercase"> Add Cart <i className="fas fa-cart-arrow-down fa-x"></i> </button>
+						<button onClick={()=> addToCart(product)} className="btn btn-dark text-uppercase"> Add Cart <i className="fas fa-cart-arrow-down fa-x"></i> </button>
 					</div>
 			</div>
 		</div>

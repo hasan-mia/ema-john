@@ -1,15 +1,14 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useCart from '../../Hooks/useCart';
 import useProducts from '../../Hooks/useProducts';
 import './Cart.css'
 
-const Cart = () => {
+const Cart = ({checkOut, removeItem}) => {
 	// Call Product and cart hook
 	const [products, setProducts] = useProducts();
 	const [cart, setCart] = useCart(products);
-	
+	// cart.map(p=>console.log(p));
 	// total Price & Shipping of Product
 	let total = 0;
 	let shipping = 0;
@@ -32,33 +31,39 @@ const Cart = () => {
 				<div className="row">
 					<div className="col-lg-8 col-md-6 col-12">
 						<div className="cart-item pt-5">
+							{
+							cart && null ?
+							<h1 className='mt-5 pt-5'>No Product</h1>
+							: 
 							<table className='table'>
-								<thead>
-									<tr className='d-flex justify-content-between'>
-										<th className='float-start text-center'>Image</th>
-										<th className='w-100'>Name</th>
-										<th>Price</th>
-										<th>Quantity</th>
-										<th>Total</th>
-										<th className='float-end'> <i className="far fa-backspace"></i></th>
-									</tr>
-								</thead>
-								<tbody>
-									{
-										cart.map(item =>
-											<tr className='d-flex align-items-center' id='item'>
-												<td className='float-start'> <img className='img-fluid cart-img' src={item.img} alt="Image" /> </td>
-												<td className='w-100'>{item.name}</td>
-												<td>{item.price}</td>
-												<td>{item.quantity}</td>
-												<td>{item.price * item.quantity}</td>
-												<td className='float-end'> <button className='btn-transparent'><i className="fas fa-trash-alt"></i></button> </td>
-											</tr>
-										)
-									}
-									
-								</tbody>
-							</table>
+									<thead>
+										<tr className='d-md-flex justify-content-between item-title'>
+											<th className='float-start text-center'>Image</th>
+											<th className='w-100'>Name</th>
+											<th>Price</th>
+											<th>Quantity</th>
+											<th>Total</th>
+											<th className='float-end'> <i className="far fa-backspace"></i></th>
+										</tr>
+									</thead>
+									<tbody>
+										{
+											cart.map(item =>
+												<tr className='d-md-flex align-items-center item'>
+													<td className='float-start'> <img className='img-fluid cart-img' src={item.img} alt="Image" /> </td>
+													<td className='w-100'>{item.name}</td>
+													<td>{item.price}</td>
+													<td>{item.quantity}</td>
+													<td>{item.price * item.quantity}</td>
+													<td className='float-end'> <button onClick={()=>removeItem(item)} className='btn-transparent'><i className="fas fa-trash-alt"></i></button> </td>
+												</tr>
+											)
+										}
+										
+									</tbody>
+								</table>
+							
+							}
 						</div>
 					</div>
 
@@ -72,7 +77,8 @@ const Cart = () => {
 							<p>Grand Total: ${grandTotal.toFixed(2)} </p>
 
 							<div className='row'>
-								<Link to='/order' className='btn-dark p-2 text-center rounded fs-5 text-uppercase cursor-pointer fw-bold'>Checkout</Link>
+								{/* <button type='button' onClick={checkOut}>Delete All</button> */}
+								<Link to='/order' onClick={checkOut} className='btn-dark p-2 text-center rounded fs-5 text-uppercase cursor-pointer fw-bold'>Checkout</Link>
 							</div>
 						</div>
 					</div>

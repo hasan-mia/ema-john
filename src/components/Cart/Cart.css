@@ -43,5 +43,17 @@ button.btn-transparent {
     .summery{
         padding-top: 1rem!important;
         margin-top: 1rem!important;
+    } 
+}
+@media(max-width:576px){
+     .item-title{
+        display: none;
+    }
+    .item {
+        display: grid;
+        /* justify-items: center; */
+    }
+    .float-start .w-100{
+        text-align: center;
     }
 }

@@ -5,8 +5,6 @@ import './Slider.css'
 
 const Slider = () => {
 	const [slider, setSlider] = useSlider();
-
-	console.log(slider);
 	// Controller
 	const [index, setIndex] = useState(0);
 	const handleSelect = (selectedIndex, e) => {
