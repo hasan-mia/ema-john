@@ -1,26 +1,15 @@
 import React from 'react';
-import useCart from '../../Hooks/useCart';
-import useProducts from '../../Hooks/useProducts';
-import Cart from '../Cart/Cart';
+import { Link } from 'react-router-dom';
 import './Order.css'
 
 const Order = () => {
-	// Call Product and cart hook
-	const [products, setProducts] = useProducts();
-	const [cart, setCart] = useCart(products);
-	
-
 	return (
-		<section className='order'>
+		<section className='order text-center'>
 			<div className='container'>
 				<div className="row">
-					<div className="col-lg-8 col-md-6 col-12">
-						<h1> {quantity} </h1>
-					</div>
-					<div className="col-lg-4 col-md-6 col-12">
-						<Cart 
-						cart={cart}
-						></Cart>
+					<div className="col-12">
+						<h1 className='fw-bold p-2'> Thanks For Order </h1>
+						<Link to='/' className='btn-dark pt-1 pb-2 px-2 rounded text-center fs-2 cursor-pointer'>Back Home</Link>
 					</div>
 				</div>
 			</div>

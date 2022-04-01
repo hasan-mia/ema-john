@@ -11,6 +11,9 @@ import useProducts from './Hooks/useProducts';
 import useCart from './Hooks/useCart';
 import { addToDb } from './Utils/fakedb';
 import Cart from './components/Cart/Cart';
+import Order from './components/Order/Order';
+import Contact from './components/Pages/Contact';
+import Home from './components/Home';
 
 
 function App() {
@@ -45,15 +48,14 @@ function App() {
 			<Header cart={cart}></Header>			
 				{/* =========All Routes======= */}
 				<Routes>
-					<Route path='/' element={
-						<Shop
+					<Route path='/' element={<Home
 						products={products}
 						addToCart={addToCart}
-						/>
-						}>	
-					</Route>
+						/>}></Route>
+					<Route path='/order' element={<Order/>}></Route>
 					<Route path='/cart' element={<Cart/>}></Route>
 					<Route path='/about' element={<About/>}></Route>
+					<Route path='/contact' element={<Contact/>}></Route>
 				</Routes>
 			</Router>
 

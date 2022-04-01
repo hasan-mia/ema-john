@@ -6,8 +6,8 @@ import '../Pages/Pages.css'
 const Shop = ({products, addToCart}) => {
 	
 	return (
-		<section className="pages">
-			<div className="container mb-2 mt-4 pt-5">
+		<section className="shop mt-2">
+			<div className="container mb-2">
 				<div className="row">
 					{/* Main Body */}
 					<div className="col-12">

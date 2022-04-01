@@ -21,9 +21,9 @@ const Header = ({cart}) => {
 				<Navbar.Collapse>
 				<Nav className="me-auto my-2 my-lg-0">
 					<Link className='nav-link' to="/">Home</Link>
-					<Link className='nav-link' to="/cart">Order</Link>
-					{/* <Link className='nav-link' href="/inventory">Inventory</Link> */}
 					<Link className='nav-link' to="/about">About</Link>
+					{/* <Link className='nav-link' href="/inventory">Inventory</Link> */}
+					<Link className='nav-link' to="/contact">Contact</Link>
 				</Nav>
 
 				<Form className="d-flex w-lg-50">

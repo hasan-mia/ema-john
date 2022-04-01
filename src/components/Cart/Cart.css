@@ -17,7 +17,7 @@
 tr#item {
     border: 1px solid gainsboro;
     margin-top: 8px;
-    background: #ffeeb9;
+    /* background: #ffeeb9; */
 }
 .summery {
     background: #ffc3104a;
@@ -33,6 +33,11 @@ tr#item {
 .summery p {
     font-size: 20px;
     font-weight: 500;
+}
+button.btn-transparent {
+    border-radius: 50%;
+    background: #ffeeb9;
+    color: #e63434;
 }
 @media (max-width: 767px){
     .summery{

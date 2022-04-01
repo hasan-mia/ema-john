@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import useCart from '../../Hooks/useCart';
 import useProducts from '../../Hooks/useProducts';
 import './Cart.css'
@@ -71,7 +72,7 @@ const Cart = () => {
 							<p>Grand Total: ${grandTotal.toFixed(2)} </p>
 
 							<div className='row'>
-								<Button variant='dark fs-5 text-uppercase  fw-bold'>Checkout</Button>
+								<Link to='/order' className='btn-dark p-2 text-center rounded fs-5 text-uppercase cursor-pointer fw-bold'>Checkout</Link>
 							</div>
 						</div>
 					</div>
