@@ -30,11 +30,17 @@ function App() {
 			selectedProduct.quantity = 1;
 			newUpdateCart = [...cart, selectedProduct];
 
-		} else {
+		} 
+		else if (existProduct) {
+			alert('allready added')
+			newUpdateCart = [...cart];
+		}
+		else {
 			const rest = cart.filter(product => product.id !== selectedProduct.id);
 			existProduct.quantity = existProduct.quantity + 1;
 			newUpdateCart = [...rest, existProduct];
 		}
+		
 		setCart(newUpdateCart);
 
 		// Add Product into localStorage DB
