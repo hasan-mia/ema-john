@@ -2,11 +2,9 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header/Header';
-// import Shop from './components/Shop/Shop';
 import Footer from './components/Footer/Footer';
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {Route, Routes } from "react-router-dom";
 import About from './components/Pages/About';
-// import Order from './components/Order/Order';
 import useProducts from './Hooks/useProducts';
 import useCart from './Hooks/useCart';
 import { addToDb, deleteShoppingCart, removeFromDb } from './Utils/fakedb';
@@ -14,6 +12,7 @@ import Cart from './components/Cart/Cart';
 import Order from './components/Order/Order';
 import Contact from './components/Pages/Contact';
 import Home from './components/Home';
+import Users from './components/Users/Users';
 
 
 function App() {
@@ -34,7 +33,6 @@ function App() {
 	}
 	// Handle Cart Button
 	const addToCart = (selectedProduct) => {
-		// console.log(selectedProduct);
 		// Get Existed Product
 		let newUpdateCart = [];
 		const existProduct = cart.find(product => product.id === selectedProduct.id);
@@ -59,7 +57,6 @@ function App() {
 	
 	return(
 		<>
-			<Router>
 			{/* =========Header======= */}
 			<Header cart={cart} checkOut={checkOut}></Header>			
 				{/* =========All Routes======= */}
@@ -69,6 +66,7 @@ function App() {
 						addToCart={addToCart}
 						checkOut={checkOut}
 						/>}></Route>
+					<Route path='/user' element={<Users/>}></Route>
 					<Route path='/order' element={<Order/>}></Route>
 					<Route path='/cart' element={<Cart
 						checkOut={checkOut}
@@ -78,8 +76,7 @@ function App() {
 					<Route path='/about' element={<About/>}></Route>
 					<Route path='/contact' element={<Contact/>}></Route>
 				</Routes>
-			</Router>
-
+		
 			{/* =========Footer======= */}
 			<Footer></Footer>
 		</>

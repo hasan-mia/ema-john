@@ -21,38 +21,13 @@ const Slider = () => {
 						src={item.img}
 						alt="First slide"
 						/>
-						<Carousel.Caption className='text-black'>
+						{/* <Carousel.Caption className='text-black'>
 						<h3 className='bg-pink text-white fs-2 fw-bold text-uppercase'>{item.title}</h3>
 						<p className='text-white s-4'>{item.description}</p>
-						</Carousel.Caption>
+						</Carousel.Caption> */}
 					</Carousel.Item>
 					)
 			}
-			
-			{/* <Carousel.Item>
-				<img
-				className="d-block w-100 img-fluid"
-				src="https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg"
-				alt="Second slide"
-				/>
-
-				<Carousel.Caption className='text-black'>
-				<h3>Second slide label</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-				</Carousel.Caption>
-			</Carousel.Item>
-			<Carousel.Item>
-				<img
-				className="d-block w-100 img-fluid"
-				src="https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg"
-				alt="Third slide"
-				/>
-
-				<Carousel.Caption className='text-black'>
-				<h3>Third slide label</h3>
-				<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-				</Carousel.Caption>
-			</Carousel.Item> */}
 			</Carousel>
 		</Container>
 	);

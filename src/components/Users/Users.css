@@ -1,0 +1,38 @@
+.title {
+    text-align: center!important;
+    color: #212529;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+.social-login li a i {
+    border-radius: 50%;
+    padding: 5px;
+}
+.social-login .fa-google {
+	background-image: linear-gradient(#4285F4, #DB4437, #F4B400, #0F9D58);
+}
+.social-login .fa-facebook {
+	background-color: #3b5998;
+}
+.social-login .fa-github {
+	background-color: #171515;
+}
+
+.social-login .fa-google:hover {
+	background-image: linear-gradient(#4285F4, #DB4437, #F4B400, #0F9D58);
+	color: aliceblue;
+}
+.social-login .fa-facebook:hover {
+	background-color: #3b5998;
+	color: aliceblue;
+}
+.social-login .fa-github:hover {
+	background-color: #171515;
+	color: aliceblue;
+}
+
+@media(min-width:768px){
+	.form {
+    	padding: 0 25%;
+	}
+}
