@@ -37,7 +37,7 @@ const Header = ({cart}) => {
 				</Form>
 
 				<Nav className="ms-auto my-2 my-lg-0 nav-right">
-					<Link className='nav-link' to="/user"> <i className='fas fa-user'></i> </Link>
+					<Link className='nav-link' to="/login"> <i className='fas fa-user'></i> </Link>
 					<Link className='nav-link' to="/wishlist"> <i className='fas fa-heart'></i> </Link>
 					<Link className='nav-link' to = "/cart" > <i className ='fas fa-cart-arrow-down' > </i> 
 					<span className='position-absolute badge rounded top-0 cart-count'>

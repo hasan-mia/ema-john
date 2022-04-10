@@ -18,6 +18,7 @@ const useCart = (products) => {
 		}
 		// Set/Save new cart data in ui
 		setCart(savedCart)
+		
 
 	}, [products])
 

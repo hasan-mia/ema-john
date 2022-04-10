@@ -13,7 +13,11 @@ import Order from './components/Order/Order';
 import Contact from './components/Pages/Contact';
 import Home from './components/Home';
 import Users from './components/Users/Users';
+import { createContext } from 'react';
+import Login from './components/Users/Login';
+import Register from './components/Users/Register';
 
+export const cartContext = createContext()
 
 function App() {
 	// Call Product and Cart Hook
@@ -66,15 +70,19 @@ function App() {
 						addToCart={addToCart}
 						checkOut={checkOut}
 						/>}></Route>
+					<Route path='/about' element={<About/>}></Route>
+					<Route path='/contact' element={<Contact/>}></Route>
+
 					<Route path='/user' element={<Users/>}></Route>
+					<Route path='/login' element={<Login/>}></Route>
+					<Route path='/register' element={<Register/>}></Route>
 					<Route path='/order' element={<Order/>}></Route>
 					<Route path='/cart' element={<Cart
 						checkOut={checkOut}
 						removeItem={removeItem}
 						/>}>
 					</Route>
-					<Route path='/about' element={<About/>}></Route>
-					<Route path='/contact' element={<Contact/>}></Route>
+					
 				</Routes>
 		
 			{/* =========Footer======= */}
